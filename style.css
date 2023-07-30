@@ -1,0 +1,129 @@
+*{
+    padding : 0px;
+    margin : 0px;
+    box-sizing : border-box;
+    font-size : 20px;
+    font-family : Arial, Helvetica, sans-serif;
+}
+body{
+    width : 100%;
+    height : 100vh;
+}
+:root{
+    --color1 : #207992;
+    --color2 : #afcfe7;
+    --color3 : #ffffff;
+    --color4 : #f2f2f2;
+    --color5 : #08ffca;
+    --color6 : #ffd736;
+    --color7 : #fc0000;
+    --color8 : #000000;
+}
+.container{
+    height : 100%;
+    width : 100%;
+    background-color : var(--color2);
+}
+.navbar{
+    display : flex;
+    background-color : var(--color1);
+    align-items : center;
+    justify-content : space-between;
+    padding : 0.5rem;
+    opacity : 0;
+    transition : opacity 0.75s linear;
+}
+.navbar .nav_heading{
+    color : var(--color3);
+    font-size : 3rem;
+    padding-left : 1rem;
+    font-weight : bold;
+    opacity : 0;
+    transition : opacity 1s linear;
+}
+.navbar .menu{
+    opacity : 0;
+    display : flex;
+    justify-content : space-evenly;
+    transition : opacity 1s linear;
+}
+.navbar .menu li{
+    list-style-type : none;
+    padding-right : 1.5rem;
+}
+.navbar .menu li a{
+    font-size : 1.25rem;
+    font-weight : bold;
+    text-decoration : none;
+    color : var(--color3);
+    position : relative;
+}
+.navbar .menu li a.one{
+    color : var(--color7);
+}
+.navbar .menu li a::before{
+    content : "";
+    background-color : var(--color7);
+    position : absolute;
+    width : 0rem;
+    height : 0.125rem;
+    left : 0.125rem;
+    right : 0;
+    top : 2rem;
+    bottom : 0rem;
+    transition : all 0.5s;
+}
+.navbar .menu li a:hover{
+    color : var(--color7);
+}
+.navbar .menu li a.one:hover::before{
+    width : 3.25rem;
+}
+.navbar .menu li a.two:hover::before{
+    width : 6.5rem;
+}
+.navbar .menu li a.three:hover::before{
+    width : 3.5rem;
+}
+.content{
+    display : flex;
+    justify-content : space-evenly;
+    overflow: hidden;
+}
+.content .part1{
+    padding : 6rem 1rem 0.5rem 1.5rem;
+    transform : translateX(-1000px);
+    transition : transform 1.5s ease-out;
+}
+.content .part1 .head1 {
+    font-weight : bold;
+    color : var(--color7);
+    font-size : 1.5rem;
+    text-align : center;
+    margin-bottom : 2rem;
+}
+.content .part1 .button1{
+    font-size : 1.5rem;
+    padding : 0.5rem;
+    border-radius : 10%;
+    margin-left : 14rem;
+    cursor : pointer;
+    font-weight : bold;
+    color : var(--color1);
+    background-color : var(--color2);
+    border : 0.25rem solid var(--color1);
+    transform: translateY(1000px);
+    transition: transform 0.5s;
+}
+.content .part1 .button1:hover{
+    color : var(--color3);
+    background-color: var(--color8);
+}
+.content .part2{
+    padding : 0.25rem;
+}
+.content .part2 .image{
+    width : 25rem;
+    transform : translateX(1000px);
+    transition : transform 1.25s ease-out;
+}
